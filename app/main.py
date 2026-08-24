@@ -9,7 +9,10 @@ app = FastAPI(title="SOC Dashboard API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://*.vercel.app"],
+    allow_origins=[
+        "http://localhost:3000",
+        "https://soc-dashboard-frontend-zeta.vercel.app",  # replace with your actual URL
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
